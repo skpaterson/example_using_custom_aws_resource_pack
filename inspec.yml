@@ -1,0 +1,20 @@
+name: example_using_aws_custom_resource_pack
+title: AWS InSpec Profile Using Custom Resource and InSpec AWS
+maintainer: The Authors
+copyright: The Authors
+copyright_email: you@example.com
+license: Apache-2.0
+summary: An InSpec Compliance Profile For AWS
+version: 0.1.0
+inspec_version: '~> 4'
+attributes:
+- name: aws_vpc_id
+  required: false
+  # Below is deliberately left as a default empty string to allow the profile to run when this is not provided.
+  # Please see the README for more details.
+  default: ''
+  description: 'Optional Custom AWS VPC Id'
+  type: string
+depends:
+  - name: example_aws_custom_resource_pack
+    url: https://github.com/skpaterson/example_aws_custom_resource_pack/archive/master.tar.gz
